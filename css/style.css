@@ -1,0 +1,97 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+.container-fluid {
+  background-color: #3db378;
+  transition: 2s;
+  min-height: 100%;
+}
+img {
+  width: 100px;
+  height: 100px;
+}
+h2 {
+  margin: 0 0 20px;
+}
+#players-area .inputs input {
+  background-color: transparent;
+  border: 2px solid orange;
+  font-size: 20px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  width: 100%;
+}
+#players-area .btn {
+  font-size: 30px;
+  border: 2px solid orange;
+  user-select: none;
+  cursor: pointer;
+}
+#players-area .btn:active {
+  border: 3px solid orange;
+  margin: -1px;
+}
+#war-area #circle-btn {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: yellow;
+  font-size: 20px;
+  font-family: fantasy;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#war-area #team-names {
+  display: flex;
+  justify-content: space-between;
+  font-size: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#war-area #team-names .team-1 {
+  color: mediumblue;
+}
+#war-area #team-names .team-2 {
+  color: purple;
+}
+#war-area .battle .indicators {
+  font-family: Consolas, 'Courier New', monospace;
+}
+#war-area .battle .indicators .health div,
+#war-area .battle .indicators .damage div {
+  height: 15px;
+}
+#war-area .battle .indicators .health div.injured-div,
+#war-area .battle .indicators .damage div.injured-div {
+  opacity: 0.4;
+}
+#war-area .battle .indicators .health div {
+  width: 5px;
+  background-color: lime;
+}
+#war-area .battle .indicators .damage div {
+  width: 15px;
+  background-color: red;
+}
+#war-area .battle .indicators .name {
+  font-size: 30px;
+}
+#war-area .battle .team-1 .name {
+  color: mediumblue;
+}
+#war-area .battle .team-2 .name {
+  color: purple;
+}
+#notes-area p {
+  font-family: Consolas, 'Courier New', monospace;
+  font-size: 22px;
+}
