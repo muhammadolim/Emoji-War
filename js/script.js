@@ -269,7 +269,13 @@ $(document).ready(function () {
                         $(team2).animate({ opacity: .5 })
 
                         firstPlayerWins = true
-                        firstTeamScore++
+                        if(!secondPlayerWins){
+                            firstTeamScore++
+                        }
+                        // when both players die - both players win
+                        else {
+                            secondTeamScore--
+                        }
                     }
                     // when either players dies
                     if ($(health1).children().first().hasClass('injured-div') || $(health2).children().last().hasClass('injured-div')) {
