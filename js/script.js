@@ -305,27 +305,30 @@ $(document).ready(function () {
                         }
                         // when all battles are finished
                         else {
-                            soundDing.play()
 
                             // team scores
                             $('#notes-area').append(`<p>${firstTeamScore} - ${secondTeamScore}`)
                                 .children().last().css({ 'font-size': '40px', 'margin': '20px 0' })
 
-                            // if first team wins
-                            if (firstTeamScore > secondTeamScore) {
-                                $('#notes-area').append(`<p>${$('#team-names .team-1').html()}<br> win!`)
-                                    .children().last().css('color', 'mediumblue').animate({ fontSize: '40px' }, 1000)
-                            }
-                            // if second team wins
-                            else if (firstTeamScore < secondTeamScore) {
-                                $('#notes-area').append(`<p>${$('#team-names .team-2').html()}<br> win!`)
-                                    .children().last().css('color', 'purple').animate({ fontSize: '40px' }, 1000)
-                            }
-                            // if it is draw
-                            else {
-                                $('#notes-area').append(`<p>draw!`)
-                                    .children().last().animate({ fontSize: '60px' }, 1000)
-                            }
+                            setTimeout(() => {
+                                soundDing.play()
+
+                                // if first team wins
+                                if (firstTeamScore > secondTeamScore) {
+                                    $('#notes-area').append(`<p>${$('#team-names .team-1').html()}<br> win!`)
+                                        .children().last().css('color', 'mediumblue').animate({ fontSize: '40px' }, 1000)
+                                }
+                                // if second team wins
+                                else if (firstTeamScore < secondTeamScore) {
+                                    $('#notes-area').append(`<p>${$('#team-names .team-2').html()}<br> win!`)
+                                        .children().last().css('color', 'purple').animate({ fontSize: '40px' }, 1000)
+                                }
+                                // if it is draw
+                                else {
+                                    $('#notes-area').append(`<p>draw!`)
+                                        .children().last().animate({ fontSize: '60px' }, 1000)
+                                }
+                            }, 1000)
                         }
 
                         // stop this battle
